@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Morpion</title>
+    <style>
+        td {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Jeu de Morpion</h1>
+    <table>
+    <tr>
+        <td><img src="../td2/blanc.gif" onmouseenter="entreeSouris(this)" onmouseout="sortieSouris()"></td>
+        <td><img src="../td2/blanc.gif" onmouseenter="entreeSouris(this)" onmouseout="sortieSouris()"></td>
+        <td><img src="../td2/blanc.gif" onmouseenter="entreeSouris(this)" onmouseout="sortieSouris()"></td>
+    </tr>
+    <tr>
+        <td><img src="../td2/blanc.gif" onmouseenter="entreeSouris(this)" onmouseout="sortieSouris()"></td>
+        <td><img src="../td2/blanc.gif" onmouseenter="entreeSouris(this)" onmouseout="sortieSouris()"></td>
+        <td><img src="../td2/blanc.gif" onmouseenter="entreeSouris(this)" onmouseout="sortieSouris()"></td>
+    <tr>
+        <td><img src="../td2/blanc.gif" onmouseenter="entreeSouris(this)" onmouseout="sortieSouris()"></td>
+        <td><img src="../td2/blanc.gif" onmouseenter="entreeSouris(this)" onmouseout="sortieSouris()"></td>
+        <td><img src="../td2/blanc.gif" onmouseenter="entreeSouris(this)" onmouseout="sortieSouris()"></td>
+    </tr>
+</table>
+<script type="text/javascript">
+    
+    let caseActive = null;
+
+    function entreeSouris(caseCourante) {
+        caseActive = caseCourante;
+    }
+
+    function sortieSouris() {
+        caseActive = null;
+    }
+
+    window.onkeyup = function(event) {
+        if (caseActive !== null && !caseActive.classList.contains('desactiver')) {
+
+            if (event.key === 'o') {
+                caseActive.src = '../td2/rond.gif';
+                caseActive.className = 'desactiver';
+            } else if (event.key === 'x') {
+                caseActive.src = '../td2/croix.gif';
+                caseActive.className = 'desactiver';
+            }
+
+            caseActive = null;
+        }
+    }
+</script>
+</body>
+</html>
