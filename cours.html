@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cours JavaScript</title>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       let x = Math.floor(Math.random()*10) + 1;
+       let chiffre = null;
+       let gagne = false;
+       for(let tentation = 0; tentation < 3; tentation++){
+        chiffre = prompt('Saisir un chiffre');
+
+        if(chiffre === x){
+            alert(`${chiffre}: vous avez gagné !`);
+            gagne = true;
+            break;
+        }else{
+            alert(`${chiffre}: Saisir à nouveau un autre chiffre`);
+        }
+       }
+       if(!gagne){
+        alert(`Vous avez perdu ! Le chiffre était ${x}. Fin du jeu`);
+       }
+    </script>
+  </head>
+  <body>
+    
+  </body>
+  </html>

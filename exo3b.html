@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+</head>
+<body>
+    <p id="texte"></p>
+    <script>
+        let repeter = true;
+        let nom = "";
+
+        do{
+            nom = prompt("Veuillez saisir votre nom :");
+
+            if(nom !== null && nom.match(/^[a-zA-Z]{2,50}$/)){
+                repeter = !confirm("Votre nom est "+nom+ ". Confirmez-vous !");
+            }else{
+                alert('Erreur de saisie ! Mets un nom valide');
+            }
+        }
+        while(repeter);
+        document.getElementById("texte").innerHTML = "Lutilisateur est : " +nom;
+
+    </script>
+    
+</body>
+</html>

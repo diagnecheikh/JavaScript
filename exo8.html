@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: inline-block;
+            margin-right: 10px;
+            justify-content: center;
+        }
+       
+         #rectangle1{
+            width: 200px;
+            height: 50px;
+            border: 2px solid black;
+        }
+        
+        #rectangle2{
+            width: 200px;
+            height: 50px;
+            border: 2px solid black;
+        }
+        .orange {
+            background-color: orange;
+        }
+        .blue {
+            background-color: blue;
+        }
+        h1{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Deux rectangles </h1>
+    <div id="rectangle1" onmouseenter="changeColorOrange(this)" onmouseout="changeColorblue(this)"></div><div id="rectangle2" onmouseenter="changeColorOrange(this)" onmouseout="changeColorblue(this)"></div>
+
+    <script>
+        function changeColorOrange(element){
+            element.classList.remove("blue");
+            element.classList.add("orange");
+        }
+        function changeColorblue(element){
+            element.classList.remove("orange");
+            element.classList.add("blue");
+        }
+    </script>
+</body>
+</html>

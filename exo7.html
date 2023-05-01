@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myRectangle {
+            width: 200px;
+            height: 50px;
+            border: 2px solid #0c0c0c;
+        }
+        .corail{
+            background-color: aqua;
+        }
+        .blue {
+            background-color: blue;
+        }
+        .orange {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div id="myRectangle" class="corail" onmouseenter="changeColorblue()" onmouseout="changeColor()"></div>
+
+<script>
+   
+    function changeColorblue(){
+        document.getElementById("myRectangle").className = "orange";
+    }
+    function changeColor(){
+        document.getElementById("myRectangle").className = "blue";
+    }
+
+
+    
+</script>
+</body>
+</html>

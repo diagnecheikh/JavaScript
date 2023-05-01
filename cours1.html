@@ -1,0 +1,28 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      let guess = 8;
+      let nombre = null; 
+      let gagne = false;
+      for(let i = 0; i < 8; i++){
+        nombre = prompt('saisir un chiffre ');
+        nombre = parseInt(nombre);
+
+        if(nombre === guess){
+               alert(`${nombre} : vous avez gagné !`);
+               gagne = true;
+               break;
+        }
+        else {
+            alert(`Désolé, c'est pas le bon chiffre ! Ressayez !`)
+        }
+      }
+      if(!gagne){
+        alert(`Vous avez atteint le nombre max de tentatives ${guess}. Echec !`);
+      }
+    </script>
+  </head>
+  <body>
+    
+  </body>
+  </html>
